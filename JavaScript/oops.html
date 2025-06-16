@@ -1,0 +1,43 @@
+<script>
+//     class Ticket {
+//         number = "1234";
+//         price = 300;
+//     }
+//    let t1 = new Ticket();
+//    let t2 = new Ticket();
+
+//    class Movie {
+//     name = "Pushpa";
+//     ratings = 5;
+//    }
+//    let m1 = new Movie();
+//    let m2 = new Movie();
+
+   class Ticket {
+    constructor(number, price) {
+    this.num = number;
+    this.t_price = price;
+    }
+   }
+   let t1 = new Ticket("1234", 400);
+   let t2 = new Ticket("3456", 500);
+
+   console.log(t1.num);
+   console.log(t2.num);
+   console.log(t1.t_price);
+   console.log(t2.t_price);
+
+   class Movie {
+    constructor(name, rating) {
+this.m_name = name;
+this.m_rating = rating;
+    }
+   }
+   let m1 = new Movie("Pushpa", 5);
+   let m2 = new Movie("KGF", 4);
+
+   console.log(m1.m_name);
+   console.log(m2.m_name);
+   console.log(m1.m_rating);
+   console.log(m2.m_rating);
+</script>

@@ -1,0 +1,40 @@
+<script>
+  const add = (a, b) => {
+    return a + b;
+  };
+  console.log(add(10,20));
+
+  const add1 = (a, b) => {
+    return a + b;
+  };
+  console.log(add1(10,20));
+
+  let even_odd = (num) => num % 2 == 0;
+  console.log(even_odd(12));
+
+  let even_odd_check = (num) => {
+    if (num % 2 == 0) {
+        return true;
+    }
+    else {
+        return false;
+    }
+  }
+
+// create
+  let person =  {
+    name : "pk",
+    age : 22,
+    marks : [67,96],
+    experience : {
+        ABC:2,
+        CODE: 3,
+    },
+    study: () => console.log("Person is studying"),
+    run: () => console.log("person is running"),
+    avg: () => 61 + 96 / 2,
+  };
+   person.study();
+   person.run();
+   console.log("Average of marks:", person.avg());
+</script>

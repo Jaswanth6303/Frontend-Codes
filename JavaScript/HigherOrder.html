@@ -1,0 +1,37 @@
+<script>
+    function processGreet(fun) {
+        console.log(fun);
+        fun("Akash");
+        console.log(fun());
+    }
+    processGreet((name) => console.log("Name is:", name));
+
+    function processAddition(add) {
+        add(10, 20)
+    }
+    processAddition((a,b) => console.log(a+b));
+
+    function processMultiplication(mul) {
+        mul(20,30);
+    }
+    processMultiplication((a,b) => console.log(a*b));
+
+    function processDivision(div) {
+        div(10,20);
+    }
+    processDivision((a,b) => console.log(a/b));
+</script>
+
+
+<!--The function which accepts another function as an argument, such functions are called Higher Order functions-->
+<!--The Function which is being passed an argument to another functions,
+such functions are called as Callback Functions.
+
+what is the use of arrow function:
+In java script we have a many higher order functions like filter(), map(),
+reduce(()=>{}), forEach(()=>{}) these higher order functions accepts
+another function as an arguments so when we are passing another
+function as an argument its better if we use arrow function 
+Because arrow functions provides most consized way for the callback functions
+why consized way means shortsyntax..
+nono lengthy functions we can replace regular functions-->

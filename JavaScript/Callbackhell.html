@@ -1,0 +1,41 @@
+<script>
+    function placeOrder(callback) {
+        setTimeout(()=> {
+            console.log("Order Placed")
+            callback();
+        }, 3000);
+    }
+
+    function makePayment(callback) {
+        setTimeout(()=> {
+       console.log("Make Payment");
+       callback();
+        }, 2000);
+    } 
+    function conformOrder(callback) {
+        setTimeout(()=> {
+            console.log("Conform Order");
+            callback();
+        },4000);
+    }
+
+    function sendEmail() {
+        setTimeout(()=> {
+            console.log("Send Mail");
+        },6000);
+    }
+    placeOrder(()=> {
+        makePayment(()=> {
+            conformOrder(()=> {
+                sendEmail(()=> {
+
+                });
+            });
+        });
+    });
+   console.log("Other tasks...!");
+</script>
+
+<!--callbackhell: The nested calling of function is only called as callback
+In asyncronous programming when you want achieve synchronous like behavior by
+using nested calling of functions this is called as piramid of dum or callbackhell.-->

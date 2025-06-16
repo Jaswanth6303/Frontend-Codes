@@ -1,0 +1,30 @@
+<script>
+    let p1 = new Promise((resolve, reject)=> {
+        setTimeout(()=> {
+            console.log("Fetching the data...!");
+            reject("No data");
+        }, 4000);
+    });
+
+    p1.then((data) => {
+        console.log("Fetched Data is: ", data);
+    }).catch((msg)=> {
+        console.log("Error msg:", msg);
+    });
+
+    let p2 = new Promise((resolve, reject)=> {
+        setTimeout(()=> {
+            console.log("Fetchinh the data");
+            resolve("12345");
+        },5000);
+    });
+
+    p2.then((data)=> {
+console.log("Fetching the Data is:", data);
+    }).catch((msg)=> {
+        console.log("Error msg:", msg);
+    });
+
+
+
+</script>

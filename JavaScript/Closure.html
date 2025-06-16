@@ -1,0 +1,49 @@
+<script>
+function counter1() {
+    count = 0; //private variable
+    return function() {
+        console.log("Count:", count++);
+    };
+}
+var increase = counter1();
+increase();
+increase();
+
+
+// Example:2
+function multiplication(count) {
+    return function(num) {
+        console.log(num * count);
+    };
+}
+ var double = multiplication(2);
+ double(20);
+ double(33);
+
+ var triple = multiplication(3);
+ triple(4);
+ triple(20);
+
+//  Multiple functions
+function counter() {
+    count = 0;
+    return {
+        increase: () => console.log("Count is:", ++count),
+        decrease: () => console.log("Count is:", --count),
+        reset: () => {
+            count = 0;
+            console.log("Count is:", count);
+        },
+    };
+}
+var ref = counter();
+ref.increase();
+ref.increase();
+ref.increase();
+ref.decrease();
+ref.reset();
+
+
+</script>
+<!--A closure in JS is a function that remembers the variables from
+its surrounding scope even after the scope has finished executing.-->

@@ -1,0 +1,25 @@
+<script>
+    li = [10, 20, 30, 40, 50];
+    li.forEach(function(ele) {
+        console.log(ele);
+    })
+
+    arr = [10,20,30];
+    arr.forEach((ele, index, arr) => {
+        console.log(ele, index, arr)
+    })
+
+    arr = [12,20,30,40]
+    let sum = 0;
+    for(i = 0; i < arr.length; i++) {
+        sum = sum+arr[i];
+    }
+    console.log(sum);
+
+    arr = [12,20,30,40]
+    let product = 1;
+    for(i = 0; i < arr.length; i++) {
+        product = product * arr[i];
+    }
+    console.log(product);
+</script>

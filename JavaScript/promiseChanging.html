@@ -1,0 +1,55 @@
+<script>
+    function placeOrder() {
+        return new Promise((resolve, reject)=> {
+            setTimeout(()=> {
+                console.log("Order Placed...!");
+                resolve();
+            },4000);
+        });
+    }
+
+    function makePayment() {
+        return new Promise((resolve, reject)=> {
+            setTimeout(()=> {
+                // console.log("Payment Succsesfully...!");
+                reject("Not Enough Balance");
+            },2000);
+        });
+    }
+
+    function conformOrder() {
+        return new Promise((resolve, reject)=> {
+            setTimeout(()=> {
+                console.log("Order is conformed...!");
+                resolve();
+            },2000);
+        });
+    }
+
+    function sendEmail() {
+        return new Promise((resolve, reject)=> {
+            setTimeout(()=> {
+                console.log("Sent to the email...!");
+                resolve();
+            },2000);
+        });
+    }
+function processOrder() {
+    console.log("Process Start...!");
+placeOrder()
+.then(() => makePayment())
+.then(() => conformOrder())
+.then(() => sendEmail())
+.then(() => console.log("Process End...!"))
+.catch((msg) => console.log("Error msg:", msg));
+console.log("Final Process Ended...!!");
+
+}
+processOrder();
+// try {
+// processOrder();
+// } catch {
+//     console.log("Some error occured and Handeled...!");
+// }
+
+</script>

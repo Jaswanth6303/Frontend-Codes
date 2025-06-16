@@ -1,0 +1,19 @@
+<script>
+    const add = (...args) => {
+        if (args.length == 0) {
+            console.log("Addition is:", 0);
+        } else if (args.length == 1) {
+            console.log("Addition is:", args[0]);
+        } else {
+            result = args.reduce((acc, ele) => acc + ele, 0);
+            console.log("Addition is:",result);
+        }
+    }
+    add();
+    add(10);
+    add(10,20);
+    add(10,20,30);
+    
+
+
+</script>

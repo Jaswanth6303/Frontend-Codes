@@ -1,0 +1,44 @@
+/*ID Selector: */
+#main-heading {
+    color:blue;
+    font-family: Arial, Helvetica;
+    text-align: center;
+}
+/* Class Selector */
+.para {
+    color:darkcyan;
+    font-family: cursive;
+}
+
+.addon{
+    background-color: aliceblue;
+    font-weight: bold;
+}
+
+input[type="email"] {
+    background-color: lightblue;
+    border-radius: 5px;
+    border: 2px solid black;
+}
+
+div pre {
+    color:blue;
+}
+
+div>pre {
+    background-color: aquamarine;
+}
+/* Adjusant Sibling selector */
+h3+pre {
+    text-align: center;
+}
+
+h3~pre {
+    background-color: lightcoral
+}
+
+h4 {
+    color: brown;
+}
+
+h4, pre,}

@@ -1,0 +1,26 @@
+<style>
+    .list {
+        color:blue;
+    }
+</style>
+<body>
+    <from></from>
+    <input id="task" placeholder="enter Task"/>
+    <button onclick="collectData(event)">Add Task</button>
+</from>
+    <ul id="unli"></ul>
+</body>
+
+
+<script>
+    var target = document.getElementById("unli");
+    function collectData(e) {
+        e.preventDefault();
+    console.log(target)
+    var userData = document.getElementById("task").value;
+    var newele = document.createElement("li");
+    newele.classList.add("List");
+    newele.textContent = userData;
+    target.appendChild(newele);
+    }
+</script>
